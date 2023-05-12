@@ -1,0 +1,36 @@
+/* Accordion container */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: 0.4s;
+}
+
+/* Active (selected) accordion */
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+/* Accordion panel */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/* Show the panel when accordion is active */
+.active + .panel {
+    max-height: 500px; /* Adjust this value as needed */
+}
+
+.images-container {
+    display: flex;
+}
