@@ -67,7 +67,7 @@ function createReport(data) {
   </tr>`;
 
   const testPass = (rawMisMatchPercentage) => {
-    if (rawMisMatchPercentage > 20) {
+    if (rawMisMatchPercentage > 5) {
       return "callout-failed ps-4 mb-5";
     } else {
       return "callout-success ps-4 mb-5";
