@@ -117,8 +117,9 @@ function createReport(data) {
     </h2>
     <div id="collapse${key}" class="accordion-collapse collapse show" data-bs-parent="#ScenariosAccordion">
       <div class="accordion-body">
-      ${Object.entries(steps)
-        .map(([key, step]) => renderStep(key, step))
+      ${Object.keys(steps)
+        .sort()
+        .map((key) => renderStep(key, steps[key]))
         .join("")}
       </div>
     </div>
